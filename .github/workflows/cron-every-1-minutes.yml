@@ -1,0 +1,19 @@
+name: Cron Every 1 Minutes
+
+on:
+  schedule:
+    - cron: '*/1 * * * *'
+  workflow_dispatch:
+
+jobs:
+  cron-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start job
+        run: echo "Cron job started"
+
+      - name: Display date and time
+        run: date
+
+      - name: Complete job
+        run: echo "Cron job completed"
